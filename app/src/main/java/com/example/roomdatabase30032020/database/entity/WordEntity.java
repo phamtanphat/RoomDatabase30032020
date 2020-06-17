@@ -17,7 +17,6 @@ public class WordEntity {
     @ColumnInfo(name = "vietnamese")
     private String vn;
 
-
     @ColumnInfo(name = "ismemorized" , defaultValue = "false")
     private Boolean ismemorized;
 

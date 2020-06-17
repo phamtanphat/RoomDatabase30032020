@@ -8,7 +8,9 @@ import com.example.roomdatabase30032020.database.entity.WordEntity;
 
 import java.util.List;
 
+import io.reactivex.Completable;
 import io.reactivex.Flowable;
+import io.reactivex.Maybe;
 
 public class DatabaseRepository {
     public static DatabaseRepository repository = null;
@@ -27,5 +29,15 @@ public class DatabaseRepository {
     public Flowable<List<WordEntity>> getListDataWord(){
         return databaseRequest.getList();
     }
+    public Maybe<Long> insertWord(WordEntity wordEntity){
+        return databaseRequest.insertWord(wordEntity);
+    }
 
+    public Completable deleteWord(WordEntity wordEntity){
+        return databaseRequest.deleteWord(wordEntity);
+    }
+
+    public Completable updateWord(WordEntity wordEntity){
+        return databaseRequest.updateWord(wordEntity);
+    }
 }
